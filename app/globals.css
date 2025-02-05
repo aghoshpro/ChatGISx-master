@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+/* Custom styles for the quadrant layout */
+.quadrant-layout {
+  @apply grid grid-cols-[250px_1fr] gap-4 h-screen;
+}
+
+.sidebar {
+  @apply bg-white dark:bg-gray-800 p-4 shadow-lg;
+}
+
+.main-content {
+  @apply grid grid-cols-2 gap-4 p-4;
+}
+
+.map-container {
+  @apply bg-white dark:bg-gray-800 rounded-lg shadow-lg;
+}
+
+.table-container {
+  @apply bg-white dark:bg-gray-800 rounded-lg shadow-lg;
+}
+
+.chat-container {
+  @apply bg-white dark:bg-gray-800 rounded-lg shadow-lg col-span-1 row-span-1;
+}
+
+.app-title {
+  @apply text-4xl font-bold text-center py-4 text-gray-800 dark:text-white;
+}
+
+.theme-toggle-btn {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid #666;
+  border-radius: 0.5rem;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.theme-toggle-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Add these theme classes */
+.dark-theme {
+  /* Dark theme colors */
+  background-color: #1a1a1a;
+  color: #ffffff;
+}
+
+.light-theme {
+  /* Light theme colors */
+  background-color: #ececec;
+  color: #1a1a1a;
+}
